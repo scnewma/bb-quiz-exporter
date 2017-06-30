@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Blackboard Quiz Exporter",
+  "description": "Exports your blackboard quiz so it can be imported into a flashcard program.",
+  "version": "1.0",
+
+  "background": {
+    "page": "background.html"
+  },
+
+  "page_action": {
+  },
+
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "https://ajax.googleapis.com/"
+  ]
+}
