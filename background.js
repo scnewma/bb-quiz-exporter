@@ -25,9 +25,21 @@ function copyToClipboard(text) {
   input.remove();
 }
 
+function addQuestionDescriptor(results) {
+  return results.map(function(a) {
+    a[0] = 'T/F: ' + a[0];
+
+    return a;
+  });
+}
+
 function initDownload(results) {
 
-  copyToClipboard(toTSV(results[0]));
+  copyToClipboard(
+    toTSV(
+      addQuestionDescriptor(results[0])
+    )
+  );
 
   alert('Copied the quiz as TSV to the clipboard!')
 
